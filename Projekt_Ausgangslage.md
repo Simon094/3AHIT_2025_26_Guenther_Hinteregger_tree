@@ -1,14 +1,15 @@
-# Verwandtentafel – Donald Trump (Projektgeber)
+# Stammbaum der Familie Hinteregger (5 Generationen)
 
-Diese Verwandtentafel geht **5 Generationen** zurück und stellt die direkten Vorfahren von Donald Trump dar.
+## Hintergrundgeschichte
+Günther Hinteregger, geboren 1972 in der Steiermark, ist ein Mann, der seine Wurzeln nie vergessen hat. Nach vielen Jahren als Bauunternehmer im Ausland kehrte er zurück in sein Heimatdorf, wo noch immer die alten Geschichten über seine Familie erzählt werden.  
+Doch je mehr Zeit verging, desto mehr fiel ihm auf, dass die Erinnerungen an die Ahnen langsam verschwinden. Er beschloss, einen **Stammbaum über fünf Generationen** zu erstellen – nicht nur für sich selbst, sondern auch als Vermächtnis für seine Kinder und Enkel.  
+
+Für Günther bedeutet dieser Stammbaum mehr als nur eine Aneinanderreihung von Namen:  
+- Er will die **Tradition und Geschichte seiner Familie** bewahren.  
+- Er möchte seinen Nachkommen zeigen, **woher sie stammen und welche Werte weitergegeben wurden**.  
+- Er sieht den Stammbaum als **Erbstück**, das Generationen überdauern soll.  
+
+So entstand sein Projekt: die Dokumentation der Stammlinie der Familie Hinteregger.
 
 ---
 
-## Hinweise
-- **Generation 1**: Ausgangsperson (Donald Trump).  
-- **Generation 2**: Eltern.  
-- **Generation 3**: Großeltern.  
-- **Generation 4**: Urgroßeltern.  
-- **Generation 5**: Ururgroßeltern.  
-
-Nicht bekannte Personen können mit „unbekannt“ markiert werden.
