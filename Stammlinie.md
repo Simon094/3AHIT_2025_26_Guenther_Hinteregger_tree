@@ -13,7 +13,8 @@
 - **Helene Hinteregger, geb. Pichler** (*1947)  
 
 ### 4. Generation  
-- **Günther Hinteregger** (*1972), Bauunternehmer, Gründer des Stammbaum-Projekts  
+- **Günther Hinteregger** (*1972), Bauunternehmer, Gründer des Stammbaum-Projekts
+- **Denise Hinteregger, geb Maier** (*1979), Volkschullehrer  
 
 ### 5. Generation (Kinder von Günther)  
 - **Lisa Hinteregger** (*1998), Lehrerin  
