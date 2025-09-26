@@ -14,7 +14,7 @@
 
 ### 4. Generation  
 - **Günther Hinteregger** (*1972), Bauunternehmer, Gründer des Stammbaum-Projekts
-- **Denise Hinteregger, geb Maier** (*1979), Volkschullehrer  
+- **Denise Hinteregger, geb. Maier** (*1979), Volkschullehrerin  
 
 ### 5. Generation (Kinder von Günther)  
 - **Lisa Hinteregger** (*1998), Lehrerin  
