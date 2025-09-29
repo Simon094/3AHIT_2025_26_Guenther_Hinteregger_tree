@@ -1,5 +1,11 @@
 ## Vision von Günther Hinteregger
 
+1.) Wir wollen Günthers Traum erfüllen
+2.) Wir wollen seiner Familie etwas damit mitgeben
+3.) Seine Geschichte soll real und emotional dargestellt werden
+
+**Günthers Geschichte**
+
 Günther Hinteregger hatte eine Vision – nicht aus Ehrgeiz oder Ruhm, sondern aus tiefem Herzen. Als er eines Abends auf der alten Holzbank vor dem verlassenen Hof seiner Großeltern saß, spürte er eine Leere, die ihn schon seit Jahren begleitete. Die Stimmen seiner Kindheit waren längst verstummt, die Geschichten, die man sich früher am Kamin erzählte, vergessen. Kein Mensch erinnerte sich mehr daran, wer seine Urgroßeltern waren, welche Wege sie gegangen sind oder welche Opfer sie gebracht hatten, damit ihre Kinder und Enkel einmal ein besseres Leben führen konnten.
 
 Er dachte an seine eigenen Kinder – Lisa und Markus – und fragte sich, ob sie jemals erfahren würden, woher sie kommen. Ob sie jemals verstehen würden, dass ihre Stärke, ihr Mut und ihr Durchhaltevermögen nicht nur in ihnen selbst, sondern in Generationen vor ihnen gewachsen waren.  
