@@ -1,7 +1,9 @@
 ## Vision von Günther Hinteregger
 
 1.) Wir wollen Günthers Traum erfüllen
+
 2.) Wir wollen seiner Familie etwas damit mitgeben
+
 3.) Seine Geschichte soll real und emotional dargestellt werden
 
 **Günthers Geschichte**
