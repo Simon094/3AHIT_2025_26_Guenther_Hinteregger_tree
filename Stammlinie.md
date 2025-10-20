@@ -13,8 +13,8 @@
 - **Helene Hinteregger, geb. Pichler** (*1947)  
 
 ### 4. Generation  
-- **Günther Hinteregger** (*1972), Arzt, Gründer des Stammbaum-Projekts
-- **Denise Hinteregger, geb. Maier** (*1992), Volkschullehrerin  
+- **Günther Hinteregger** (*1970), Arzt, Gründer des Stammbaum-Projekts
+- **Denise Hinteregger, geb. Maier** (*1990), Volkschullehrerin  
 
 ### 5. Generation (Kinder von Günther)  
 - **Lisa Hinteregger** (*2010), HTL-Maschienenbau  
