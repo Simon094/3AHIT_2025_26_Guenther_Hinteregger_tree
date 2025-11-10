@@ -1,0 +1,12 @@
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\bin\Debug\net9.0\FamilytreesLib.deps.json
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\bin\Debug\net9.0\FamilytreesLib.dll
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\bin\Debug\net9.0\FamilytreesLib.pdb
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.AssemblyInfoInputs.cache
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.AssemblyInfo.cs
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.csproj.CoreCompileInputs.cache
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.sourcelink.json
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.dll
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\refint\FamilytreesLib.dll
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.pdb
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\ref\FamilytreesLib.dll

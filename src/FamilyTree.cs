@@ -23,4 +23,6 @@ public class FamilyTree
     {
         _person.Remove(person);
     }
+
+    
 }
