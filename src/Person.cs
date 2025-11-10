@@ -1,18 +1,24 @@
 ﻿using System.Drawing;
 using System.Threading.Tasks.Dataflow;
 using System.Windows;
+using System.Security;
+using System.Buffers;
+using System.Xml;
+using System.Runtime;
+using System.CodeDom;
+using System.Formats;
 namespace FamilytreesLib;
 
 public class Person
 {
     private string _name;
     private DateTime _birthdate;
-    private DateTime _deathdate;
+    private DateTime? _deathdate;
     private bool _married;
     private List<Person> _children = new List<Person>();
     private string _job;
     private string _school;
-    public Person(string name, DateTime birthdate, bool married, string job, string school)
+    public Person(string name, DateTime birthdate, bool married, string job, string school, DateTime deathdate)
     {
         _name = name;
         _birthdate = birthdate;
@@ -20,6 +26,7 @@ public class Person
         _job = job;
         _school = school;
         DateTime today = DateTime.Today;
+        _deathdate = deathdate;
     }
 
     public void addChild(Person child)
@@ -32,7 +39,7 @@ public class Person
         _deathdate = date;
     }
 
-    public void changeMariageStatus()
+    public void changeMarriageStatus()
     {
         if (_married == false)
         {
@@ -58,7 +65,7 @@ public class Person
         return _birthdate;
     }
 
-    public DateTime getDeathdate()
+    public DateTime? getDeathdate()
     {
         return _deathdate;
     }
