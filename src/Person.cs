@@ -1,12 +1,8 @@
 ﻿using System.Drawing;
 using System.Threading.Tasks.Dataflow;
 using System.Windows;
-using System.Security;
-using System.Buffers;
-using System.Xml;
-using System.Runtime;
-using System.CodeDom;
-using System.Formats;
+using Microsoft.VisualBasic;
+using Microsoft.Win32;
 namespace FamilytreesLib;
 
 public class Person
@@ -18,7 +14,9 @@ public class Person
     private List<Person> _children = new List<Person>();
     private string _job;
     private string _school;
-    public Person(string name, DateTime birthdate, bool married, string job, string school, DateTime deathdate)
+    private string _base64Image;
+    
+    public Person(string name, DateTime birthdate, bool married, string job, string school, DateTime deathdate, string base64Image)
     {
         _name = name;
         _birthdate = birthdate;
@@ -27,6 +25,7 @@ public class Person
         _school = school;
         DateTime today = DateTime.Today;
         _deathdate = deathdate;
+        _base64Image = base64Image;
     }
 
     public void addChild(Person child)
@@ -84,21 +83,29 @@ public class Person
     {
         return _school;
     }
-  public bool IsAdult()
-{
-    DateTime today = DateTime.Today;
-    int age = today.Year - _birthdate.Year;
+    public bool IsAdult()
+    {
+        DateTime today = DateTime.Today;
+        int age = today.Year - _birthdate.Year;
 
-    if (_birthdate.Date > today.AddYears(-age)) 
-        age--;
+        if (_birthdate.Date > today.AddYears(-age))
+            age--;
 
-    return age >= 18;
-}
+        return age >= 18;
+    }
 
-public int getAge()
+    public int getAge()
     {
         DateTime today = DateTime.Today;
         int age = today.Year - _birthdate.Year;
         return age;
     }
+
+    public string getBase64Image
+    {
+        get => _base64Image;
+        set => _base64Image = value;
+    }
+
+    
 }
