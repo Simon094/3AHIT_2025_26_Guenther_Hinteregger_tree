@@ -33,12 +33,11 @@ public class Person
     /// </summary>
     private string _job;
     private string _school;
-    private bool _ifTrueThanItIsMaleIfItIsFalseThanItIsFemaleNoOtherGendersAllowed;
-    
+    private bool _isMale;
     private List<Person> _children = new List<Person>();
 
     private Image _personImage;
-    public Person(string name, DateTime birthdate, bool married, bool child, DateTime deathdate, Image personImage, string school = "", string job = "Arbeitslos")
+    public Person(string name, DateTime birthdate, bool married, DateTime deathdate, Image personImage, bool isMale, string school = "", string job = "Arbeitslos")
     {
         _name = name;
         _birthdate = birthdate;
@@ -47,14 +46,17 @@ public class Person
         DateTime today = DateTime.Today;
         _deathdate = deathdate;
         _personImage = personImage;
+        _isMale = isMale;
         _school = school;
-        if(this.IsAdult() == true)
+        if (this.IsAdult() == true)
         {
             _child = false;
-        } else
+        }
+        else
         {
             _child = true;
         }
+
     }
 
     public void addChild(Person child)
@@ -112,24 +114,29 @@ public class Person
     {
         return _personImage;
     }
-   public bool IsAdult()
-{
-    DateTime today = DateTime.Today;
-    int age = today.Year - _birthdate.Year;
-    if (_birthdate.Date > today.AddYears(-age))
-    {
-        age--;
-    }
 
-    if (age >= 18)
+    public string getGender()
     {
-        return true;
+        return _isMale ? "Mann" : "Frau";
     }
-    else
+    public bool IsAdult()
     {
-        return false;
+        DateTime today = DateTime.Today;
+        int age = today.Year - _birthdate.Year;
+        if (_birthdate.Date > today.AddYears(-age))
+        {
+            age--;
+        }
+
+        if (age >= 18)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-}
 
     public int getAge()
     {
@@ -146,5 +153,5 @@ public class Person
         }
         return _school;
     }
-    
+
 }
