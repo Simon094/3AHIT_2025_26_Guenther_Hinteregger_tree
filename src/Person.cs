@@ -35,9 +35,11 @@ public class Person
     private string _school;
     private bool _isMale;
     private List<Person> _children = new List<Person>();
+    private Person _father;
+    private Person _mother;
 
     private Image _personImage;
-    public Person(string name, DateTime birthdate, bool married, DateTime deathdate, Image personImage, bool isMale, string school = "", string job = "Arbeitslos")
+    public Person(string name, DateTime birthdate, bool married, DateTime deathdate, Image personImage, bool isMale, Person father, Person mother, string school = "", string job = "Arbeitslos")
     {
         _name = name;
         _birthdate = birthdate;
@@ -47,6 +49,8 @@ public class Person
         _deathdate = deathdate;
         _personImage = personImage;
         _isMale = isMale;
+        _father = father;
+        _mother = mother;
         _school = school;
         if (this.IsAdult() == true)
         {
