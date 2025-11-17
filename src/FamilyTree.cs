@@ -42,7 +42,5 @@ public class FamilyTree
     public void RemovePerson(Person person)
     {
         _person.Remove(person);
-    }
-
-    
+    }   
 }

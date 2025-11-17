@@ -10,3 +10,4 @@ c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\refint\FamilytreesLib.dll
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.pdb
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\ref\FamilytreesLib.dll
+c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.csproj.AssemblyReference.cache

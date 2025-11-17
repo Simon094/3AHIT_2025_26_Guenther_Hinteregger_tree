@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Reflection;
 using System.Threading.Tasks.Dataflow;
 using System.Windows;
 using Microsoft.VisualBasic;
@@ -7,25 +8,53 @@ namespace FamilytreesLib;
 
 public class Person
 {
+    /// <summary>
+    /// "_name" is for saving the name as a string
+    /// </summary>/
     private string _name;
+    /// <summary>
+    /// "_birthdate" is for saving the birthdate as DateTime
+    /// </summary>
     private DateTime _birthdate;
+    /// <summary>
+    /// "_deathdate" is for saving the deathdate as DateTime
+    /// </summary>
     private DateTime? _deathdate;
+    /// <summary>
+    /// "_married" is a bool to say if the person is married
+    /// </summary>
     private bool _married;
-    private List<Person> _children = new List<Person>();
+    /// <summary>
+    /// "_child" is a bool to see if the person is over 18 or not
+    /// </summary>/
+    private bool _child;
+    /// <summary>
+    /// "_job" is for saving the job
+    /// </summary>
     private string _job;
     private string _school;
-    private string _base64Image;
+    private bool _ifTrueThanItIsMaleIfItIsFalseThanItIsFemaleNoOtherGendersAllowed;
     
-    public Person(string name, DateTime birthdate, bool married, string job, string school, DateTime deathdate, string base64Image)
+    private List<Person> _children = new List<Person>();
+
+    private Image _personImage;
+    public Person(string name, DateTime birthdate, bool married, bool child, DateTime deathdate, Image personImage, string school = "", string job = "Arbeitslos")
     {
         _name = name;
         _birthdate = birthdate;
         _married = married;
         _job = job;
-        _school = school;
         DateTime today = DateTime.Today;
         _deathdate = deathdate;
-        _base64Image = base64Image;
+        _personImage = personImage;
+        _school = school;
+        if(this.IsAdult() == true)
+        {
+            _child = false;
+        } else
+        {
+            _child = true;
+        }
     }
 
     public void addChild(Person child)
@@ -79,20 +108,28 @@ public class Person
         return _job;
     }
 
-    public string getSchool()
+    public Image getPersonImage()
     {
-        return _school;
+        return _personImage;
     }
-    public bool IsAdult()
+   public bool IsAdult()
+{
+    DateTime today = DateTime.Today;
+    int age = today.Year - _birthdate.Year;
+    if (_birthdate.Date > today.AddYears(-age))
     {
-        DateTime today = DateTime.Today;
-        int age = today.Year - _birthdate.Year;
-
-        if (_birthdate.Date > today.AddYears(-age))
-            age--;
-
-        return age >= 18;
+        age--;
     }
+
+    if (age >= 18)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
     public int getAge()
     {
@@ -101,11 +138,13 @@ public class Person
         return age;
     }
 
-    public string getBase64Image
+    public string getSchool(Person person)
     {
-        get => _base64Image;
-        set => _base64Image = value;
+        if (person.IsAdult())
+        {
+            return "Die Person ist entweder kein Kind oder geht nicht zur Schule!";
+        }
+        return _school;
     }
-
     
 }

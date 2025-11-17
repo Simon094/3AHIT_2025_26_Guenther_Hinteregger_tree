@@ -1,8 +1,6 @@
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_FamilytreeTests
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\tests\bin\Debug\net9.0\testhost.dll
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\tests\bin\Debug\net9.0\testhost.exe
-c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\tests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\tests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\tests\bin\Debug\net9.0\Microsoft.TestPlatform.AdapterUtilities.dll
