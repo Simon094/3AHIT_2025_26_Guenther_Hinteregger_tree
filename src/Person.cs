@@ -37,9 +37,12 @@ public class Person
     private List<Person> _children = new List<Person>();
     private Person _father;
     private Person _mother;
+    private int _personID;
+    private int? _fatherID;
+    private int? _motherID;
 
     private Image _personImage;
-    public Person(string name, DateTime birthdate, bool married, DateTime deathdate, Image personImage, bool isMale, Person father, Person mother, string school = "", string job = "Arbeitslos")
+    public Person(string name, DateTime birthdate, bool married, DateTime? deathdate, Image personImage, bool isMale, Person father, Person mother, int personID, int? fatherID, int? motherID, string school = "", string job = "Arbeitslos")
     {
         _name = name;
         _birthdate = birthdate;
@@ -51,6 +54,9 @@ public class Person
         _isMale = isMale;
         _father = father;
         _mother = mother;
+        _personID = personID;
+        _fatherID = fatherID;
+        _motherID = motherID;
         _school = school;
         if (this.IsAdult() == true)
         {
@@ -158,4 +164,30 @@ public class Person
         return _school;
     }
 
+    public Person Father
+    {
+        get => _father;
+        set => _father = value;
+    }
+
+    public Person Mother
+    {
+        get => _mother;
+        set => _mother = value;
+    }
+
+    public int getPersonID()
+    {
+        return _personID;
+    }
+
+    public int? getFatherID
+    {
+        get => _fatherID;
+    }
+
+    public int? getMotherID
+    {
+        get => _motherID;
+    }
 }

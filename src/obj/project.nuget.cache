@@ -12,7 +12,7 @@
     {
       "code": "NU1904",
       "level": "Warning",
-      "message": "Package 'System.Drawing.Common' 4.5.2 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+      "message": "Das Paket \"System.Drawing.Common\" 4.5.2 weist eine bekannte Kritisch Schweregrad-Sicherheitsanfälligkeit auf, https://github.com/advisories/GHSA-rxg9-xrhp-64gj.",
       "projectPath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj",
       "warningLevel": 1,
       "filePath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj",
