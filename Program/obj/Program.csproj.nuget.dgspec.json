@@ -13,6 +13,7 @@
         "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\Program\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
           "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -76,6 +77,7 @@
         "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
           "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -109,7 +111,7 @@
           "dependencies": {
             "System.Drawing.Common": {
               "target": "Package",
-              "version": "[4.5.2, )"
+              "version": "(, )"
             }
           },
           "imports": [

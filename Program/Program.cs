@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 using FamilytreesLib;
 namespace PaymentApp;
-class Program
+class Program //Alles vom Mayr
 {
   static void Main(string[] args)
   {
@@ -20,11 +20,24 @@ class Program
     static void HauptMenu()
     {
         Console.WriteLine("-------------------------------------------------");
-        Console.WriteLine("Press '1' to see the family tree");
-        Console.WriteLine("Press '2' to edit the family tree");
-        Console.WriteLine("Press '3' to end the program");
+        Console.WriteLine("Drücke '1' um den Stammbaum zu sehen");
+        Console.WriteLine("Drücke '2' um den Stammbaum zu bearbeiten");
+        Console.WriteLine("Drücke '3' um den Stammbaum als PDF zu bekommen");
+        Console.WriteLine("Drücke '4' um den Stammbaum zu verlassen");
         int choice = Convert.ToInt32(Console.ReadLine());
         choice = CheckWrongChoiceInputForMainMenu(choice);
+        if(choice == 1)
+        {
+            SeeFamilyTree();
+        } else if(choice == 2)
+        {
+            EditFamilyTree();
+        } else if(choice == 3)
+        {
+            PrintFamilyTreeAsPdf();
+        } else if(choice == 4)
+        {
+        }
     }
 
     static void SeeFamilyTree()
@@ -34,11 +47,11 @@ class Program
 
     static int CheckWrongChoiceInputForMainMenu(int choice) //Enter Taste tötet alles
     {
-        if(choice < 1 || choice > 3)
+        if(choice < 1 || choice > 4)
         {
-          Console.WriteLine("Choice has to be between 1 and 3");
+          Console.WriteLine("Choice has to be between 1 and 4");
           int correctChoice = Convert.ToInt32(Console.ReadLine());
-          while(correctChoice < 1 || correctChoice > 3)
+          while(correctChoice < 1 || correctChoice > 4)
             {
                 CheckWrongChoiceInputForMainMenu(correctChoice) ;
             }
@@ -47,10 +60,14 @@ class Program
         return choice;
     }
 
-    static int Choice()
+    static void EditFamilyTree()
     {
-        int choice = Convert.ToInt32(Console.ReadLine());
-        if(1 == 1) {}
-        return 0;
+        
     }
+
+    static void PrintFamilyTreeAsPdf()
+    {
+        
+    }
+
 }

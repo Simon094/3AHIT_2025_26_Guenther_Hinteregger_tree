@@ -1,25 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "VWJec2JPPoE=",
-  "success": true,
+  "dgSpecHash": "Kc6EK7RZaz4=",
+  "success": false,
   "projectFilePath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.12\\microsoft.netcore.platforms.2.1.12.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\system.drawing.common\\4.5.2\\system.drawing.common.4.5.2.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": [
     {
-      "code": "NU1904",
-      "level": "Warning",
-      "message": "Das Paket \"System.Drawing.Common\" 4.5.2 weist eine bekannte Kritisch Schweregrad-Sicherheitsanfälligkeit auf, https://github.com/advisories/GHSA-rxg9-xrhp-64gj.",
+      "code": "NU1008",
+      "level": "Error",
+      "message": "Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: System.Drawing.Common.",
       "projectPath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj",
-      "warningLevel": 1,
       "filePath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj",
-      "libraryId": "System.Drawing.Common",
-      "targetGraphs": [
-        "net9.0"
-      ]
+      "targetGraphs": []
     }
   ]
 }

@@ -1,29 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "4amgW89F5lc=",
-  "success": true,
+  "dgSpecHash": "Hd0WzZUG68E=",
+  "success": false,
   "projectFilePath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\tests\\FamilytreeTests.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.codecoverage\\17.12.0\\microsoft.codecoverage.17.12.0.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.net.test.sdk\\17.12.0\\microsoft.net.test.sdk.17.12.0.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.12\\microsoft.netcore.platforms.2.1.12.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.testing.extensions.telemetry\\1.4.3\\microsoft.testing.extensions.telemetry.1.4.3.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.testing.extensions.trxreport.abstractions\\1.4.3\\microsoft.testing.extensions.trxreport.abstractions.1.4.3.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.testing.extensions.vstestbridge\\1.4.3\\microsoft.testing.extensions.vstestbridge.1.4.3.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.testing.platform\\1.4.3\\microsoft.testing.platform.1.4.3.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.testing.platform.msbuild\\1.4.3\\microsoft.testing.platform.msbuild.1.4.3.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.12.0\\microsoft.testplatform.objectmodel.17.12.0.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.testplatform.testhost\\17.12.0\\microsoft.testplatform.testhost.17.12.0.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\mstest\\3.6.4\\mstest.3.6.4.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\mstest.analyzers\\3.6.4\\mstest.analyzers.3.6.4.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\mstest.testadapter\\3.6.4\\mstest.testadapter.3.6.4.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\mstest.testframework\\3.6.4\\mstest.testframework.3.6.4.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\system.drawing.common\\4.5.2\\system.drawing.common.4.5.2.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
-  ],
-  "logs": []
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1008",
+      "level": "Error",
+      "message": "Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: Microsoft.NET.Test.Sdk;MSTest.",
+      "projectPath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\tests\\FamilytreeTests.csproj",
+      "filePath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\tests\\FamilytreeTests.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
