@@ -91,7 +91,7 @@ public static class DatabaseCreator //Kumpitsch
     public static void CreateDatabase()
     {
         string connectionString = "Data Source=datenbank.db";
-        string sqlFilePath = "src/sourceDatabank.sql";
+        string sqlFilePath = "sourceDatabank.sql";
 
         if (!File.Exists(sqlFilePath))
         {
