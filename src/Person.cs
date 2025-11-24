@@ -41,8 +41,7 @@ public class Person
     private int? _fatherID;
     private int? _motherID;
 
-    private Image _personImage;
-    public Person(string name, DateTime birthdate, bool married, DateTime? deathdate, Image personImage, bool isMale, Person father, Person mother, int personID, int? fatherID, int? motherID, string school = "", string job = "Arbeitslos")
+    public Person(string name, DateTime birthdate, bool married, DateTime? deathdate,bool isMale, Person father, Person mother, int personID, int? fatherID, int? motherID, string school = "", string job = "Arbeitslos")
     {
         _name = name;
         _birthdate = birthdate;
@@ -50,7 +49,6 @@ public class Person
         _job = job;
         DateTime today = DateTime.Today;
         _deathdate = deathdate;
-        _personImage = personImage;
         _isMale = isMale;
         _father = father;
         _mother = mother;
@@ -118,11 +116,6 @@ public class Person
     public string getJob()
     {
         return _job;
-    }
-
-    public Image getPersonImage()
-    {
-        return _personImage;
     }
 
     public string getGender()

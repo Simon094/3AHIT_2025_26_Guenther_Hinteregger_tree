@@ -5,9 +5,7 @@
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net9.0": [
-      "System.Drawing.Common"
-    ]
+    "net9.0": []
   },
   "packageFolders": {
     "C:\\Users\\simon\\.nuget\\packages\\": {}
@@ -52,12 +50,6 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
-        "dependencies": {
-          "System.Drawing.Common": {
-            "target": "Package",
-            "version": "(, )"
-          }
-        },
         "centralPackageVersions": {
           "Microsoft.Data.Sqlite": "10.0.0"
         },
@@ -80,12 +72,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1008",
-      "level": "Error",
-      "message": "Projekte, die die zentrale Paketversionsverwaltung verwenden, dürfen nicht die Version für die PackageReference-Elemente, sondern für die PackageVersion-Elemente definieren: System.Drawing.Common."
-    }
-  ]
+  }
 }

@@ -14,7 +14,7 @@ class Program //Alles vom Mayr
         Console.WriteLine("Willkommen bei der Stammbaum-Software");
         Console.WriteLine("-------------------------------------------------");
         Console.WriteLine("");
-        Console.WriteLine("Was möchten sie als erstes tun?");
+        Console.WriteLine("Was möchten sie tun?");
         HauptMenu();
     }
 
@@ -48,16 +48,16 @@ class Program //Alles vom Mayr
 
     static void SeeFamilyTree()
     {
-        
+       
     }
 
     static int CheckWrongChoiceInputForMainMenu(int choice) //Enter Taste tötet alles
     {
-        if(choice < 1 || choice > 4)
+        if(choice < 1 || choice > 5)
         {
-          Console.WriteLine("Choice has to be between 1 and 4");
+          Console.WriteLine("Auswahl muss zwischen 1 und 5 sein");
           int correctChoice = Convert.ToInt32(Console.ReadLine());
-          while(correctChoice < 1 || correctChoice > 4)
+          while(correctChoice < 1 || correctChoice > 5)
             {
                 CheckWrongChoiceInputForMainMenu(correctChoice) ;
             }
@@ -90,16 +90,34 @@ public static class DatabaseCreator //Kumpitsch
 {
     public static void CreateDatabase()
     {
-        string connectionString = "Data Source=familytree.db";
+        string connectionString = "Data Source=datenbank.db";
+        string sqlFilePath = "src/sourceDatabank.sql";
 
-        string sql = File.ReadAllText("Database/create.sql");
+        if (!File.Exists(sqlFilePath))
+        {
+            Console.WriteLine($"Vaterl Error 🖕: {sqlFilePath}");
+            return;
+        }
 
-        using var connection = new SqliteConnection(connectionString);
-        connection.Open();
+        string sql = File.ReadAllText(sqlFilePath);
 
-        using var command = connection.CreateCommand();
-        command.CommandText = sql;
-        command.ExecuteNonQuery();
+        try
+        {
+            using var connection = new SqliteConnection(connectionString);
+            connection.Open();
+
+            using var command = connection.CreateCommand();
+            command.CommandText = sql;
+            command.ExecuteNonQuery();
+
+            Console.WriteLine("Datenbank erfolgreich erstellt!");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Fehler beim Erstellen der Datenbank:");
+            Console.WriteLine(ex.Message);
+        }
     }
 }
+
 
