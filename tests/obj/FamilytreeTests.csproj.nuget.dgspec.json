@@ -50,6 +50,9 @@
               "version": "(, )"
             }
           },
+          "centralPackageVersions": {
+            "Microsoft.Data.Sqlite": "10.0.0"
+          },
           "imports": [
             "net461",
             "net462",
@@ -123,6 +126,9 @@
               "target": "Package",
               "version": "(, )"
             }
+          },
+          "centralPackageVersions": {
+            "Microsoft.Data.Sqlite": "10.0.0"
           },
           "imports": [
             "net461",

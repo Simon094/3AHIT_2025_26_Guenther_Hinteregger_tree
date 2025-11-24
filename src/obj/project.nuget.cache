@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Kc6EK7RZaz4=",
+  "dgSpecHash": "4kvk563jdU4=",
   "success": false,
   "projectFilePath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj",
   "expectedPackageFiles": [],
@@ -8,7 +8,7 @@
     {
       "code": "NU1008",
       "level": "Error",
-      "message": "Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: System.Drawing.Common.",
+      "message": "Projekte, die die zentrale Paketversionsverwaltung verwenden, dürfen nicht die Version für die PackageReference-Elemente, sondern für die PackageVersion-Elemente definieren: System.Drawing.Common.",
       "projectPath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj",
       "filePath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj",
       "targetGraphs": []
