@@ -143,9 +143,17 @@ public class Person
 
     public int getAge()
     {
+        int age;
+        if(_deathdate == null) {
         DateTime today = DateTime.Today;
-        int age = today.Year - _birthdate.Year;
+        age = today.Year - _birthdate.Year;
         return age;
+        } else
+        {
+         age = _deathdate.Value.Year - _birthdate.Year;
+         return age;
+        }
+        
     }
 
     public string getSchool(Person person)
@@ -182,5 +190,38 @@ public class Person
     public int? getMotherID
     {
         get => _motherID;
+    }
+
+    public override string  ToString()
+    {
+        string gender;
+        if(_isMale == true)
+        {
+            gender = "männlich";
+        } else
+        {
+            gender = "weiblich";
+        }
+
+        string aliveOrNot;
+
+        if(_deathdate == null)
+        {
+            aliveOrNot = "ist";
+        } else
+        {
+            aliveOrNot = "war";
+        }
+
+        string ageAlive;
+
+        if(_deathdate == null)
+        {
+            ageAlive = $"ist {getAge()} Jahre Alt";
+        } else
+        {
+            ageAlive = $"ist {getAge()} Jahre alt geworden";
+        }
+        return $"{_name} {aliveOrNot} {gender} und {ageAlive}";
     }
 }

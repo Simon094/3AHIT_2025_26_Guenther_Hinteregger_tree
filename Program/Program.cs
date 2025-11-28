@@ -26,7 +26,9 @@ class Program
         Console.WriteLine("Drücke '2' um den Stammbaum zu bearbeiten");
         Console.WriteLine("Drücke '3' um den Stammbaum als PDF zu bekommen");
         Console.WriteLine("Drücke '4' um den Stammbaum zu verlassen");
+        if(DatabaseExists() == false) {
         Console.WriteLine("Drücke '5' um den Stammbaum zu erstellen (falls noch nicht vorhanden)");
+        }
         int choicefirst = Convert.ToInt32(Console.ReadLine());
         int choicesecond = CheckWrongChoiceInputForMainMenu(choicefirst);
         if(choicesecond == 1)
@@ -41,11 +43,13 @@ class Program
         } else if(choicesecond == 4)
         {
             EndProgram();
-        } else if(choicesecond == 5)
+        } else if(choicesecond == 5 || DatabaseExists() == false)
         {
             DatabaseCreator.CreateDatabase();
         }
     }
+
+    
 
     static void SeeFamilyTree() //Mayr
     {
@@ -59,6 +63,7 @@ class Program
 
     static int CheckWrongChoiceInputForMainMenu(int choice) //Enter Taste tötet alles, Mayr
     {
+        if(DatabaseExists() == false) {
         if(choice < 1 || choice > 5)
         {
           Console.WriteLine("Auswahl muss zwischen 1 und 5 sein");
@@ -70,6 +75,20 @@ class Program
             return correctChoice;
         }
         return choice;
+        } else {
+            if(choice < 1 || choice > 4)
+            {
+                Console.WriteLine("Auswahl muss zwischen 1 und 4 sein");
+                int correctChoice = Convert.ToInt32(Console.ReadLine());
+                while(correctChoice < 1 || correctChoice > 4)
+            {
+                CheckWrongChoiceInputForMainMenu(correctChoice) ;
+            }
+            return correctChoice;
+            }
+        return choice;
+        }
+        
     }
 
     static void EditFamilyTree() //Mayr
@@ -87,9 +106,12 @@ class Program
         //does nothing
     }
 
+    static bool DatabaseExists()
+    {
+        return File.Exists("datenbank.db");
+    }   
+
 }
-
-
 
 
 public static class DatabaseCreator //Kumpitsch
@@ -123,6 +145,35 @@ public static class DatabaseCreator //Kumpitsch
             Console.WriteLine("Fehler beim Erstellen der Datenbank:");
             Console.WriteLine(ex.Message);
         }
+    }
+}
+
+public static class DataBaseInserter
+{
+    public static void InsertToDatabase()
+    {
+        string connectionString = "Data Source=datenbank.db";
+        string sqlFilePath = "insertDatabank.sql";
+
+        string sql = File.ReadAllText(sqlFilePath);
+
+        try
+        {
+            using var connection = new SqliteConnection(connectionString);
+            connection.Open();
+
+            using var command = connection.CreateCommand();
+            command.CommandText = sql;
+            command.ExecuteNonQuery();
+
+            Console.WriteLine("Daten wurden erfolgreich hinzugefügt");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Fehler beim hinzufügen der Daten:");
+            Console.WriteLine(ex.Message);
+        }
+
     }
 }
 

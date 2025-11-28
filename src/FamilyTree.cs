@@ -50,7 +50,11 @@ public class FamilyTree
        _person.Remove(person);
     }
 
-   
-   
-} 
-    
+   public void DisplayFamilyTreeInfos() {
+    foreach(Person p in _person) {
+        Console.WriteLine(p.ToString());
+    }
+   } 
+   }
+            
+        
