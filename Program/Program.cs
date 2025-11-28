@@ -2,56 +2,62 @@
 using FamilytreesLib;
 namespace PaymentApp;
 using Microsoft.Data.Sqlite;
-class Program //Alles vom Mayr
+class Program 
 {
-  static void Main(string[] args)
+  static void Main(string[] args) //Mayr
   {
-    StartProgram();
+    StartProgram(); //Mayr
   }
 
-  static void StartProgram()
+  static void StartProgram() //Mayr
     {
-        Console.WriteLine("Willkommen bei der Stammbaum-Software");
+        Console.WriteLine("Willkommen bei der Stammbaum-Software Familie Hinteregger");
         Console.WriteLine("-------------------------------------------------");
         Console.WriteLine("");
         Console.WriteLine("Was möchten sie tun?");
         HauptMenu();
     }
 
-    static void HauptMenu()
+    static void HauptMenu() //Mayr
     {
+        FamilyTree Hinteregger = new FamilyTree("Hinteregger");
         Console.WriteLine("-------------------------------------------------");
         Console.WriteLine("Drücke '1' um den Stammbaum zu sehen");
         Console.WriteLine("Drücke '2' um den Stammbaum zu bearbeiten");
         Console.WriteLine("Drücke '3' um den Stammbaum als PDF zu bekommen");
         Console.WriteLine("Drücke '4' um den Stammbaum zu verlassen");
         Console.WriteLine("Drücke '5' um den Stammbaum zu erstellen (falls noch nicht vorhanden)");
-        int choice = Convert.ToInt32(Console.ReadLine());
-        choice = CheckWrongChoiceInputForMainMenu(choice);
-        if(choice == 1)
+        int choicefirst = Convert.ToInt32(Console.ReadLine());
+        int choicesecond = CheckWrongChoiceInputForMainMenu(choicefirst);
+        if(choicesecond == 1)
         {
             SeeFamilyTree();
-        } else if(choice == 2)
+        } else if(choicesecond == 2)
         {
             EditFamilyTree();
-        } else if(choice == 3)
+        } else if(choicesecond == 3)
         {
             PrintFamilyTreeAsPdf();
-        } else if(choice == 4)
+        } else if(choicesecond == 4)
         {
             EndProgram();
-        } else if(choice == 5)
+        } else if(choicesecond == 5)
         {
             DatabaseCreator.CreateDatabase();
         }
     }
 
-    static void SeeFamilyTree()
+    static void SeeFamilyTree() //Mayr
     {
        
     }
 
-    static int CheckWrongChoiceInputForMainMenu(int choice) //Enter Taste tötet alles
+    static void DisplayFamilyTreeInfos()
+    {
+        
+    }
+
+    static int CheckWrongChoiceInputForMainMenu(int choice) //Enter Taste tötet alles, Mayr
     {
         if(choice < 1 || choice > 5)
         {
@@ -66,19 +72,19 @@ class Program //Alles vom Mayr
         return choice;
     }
 
-    static void EditFamilyTree()
+    static void EditFamilyTree() //Mayr
     {
         
     }
 
-    static void PrintFamilyTreeAsPdf()
+    static void PrintFamilyTreeAsPdf() //Mayr
     {
         
     }
 
     static void EndProgram()
     {
-        
+        //does nothing
     }
 
 }
@@ -95,7 +101,7 @@ public static class DatabaseCreator //Kumpitsch
 
         if (!File.Exists(sqlFilePath))
         {
-            Console.WriteLine($"Vaterl Error 🖕: {sqlFilePath}");
+            Console.WriteLine($"Vaterl Error: {sqlFilePath}");
             return;
         }
 
@@ -119,5 +125,8 @@ public static class DatabaseCreator //Kumpitsch
         }
     }
 }
+
+
+   
 
 

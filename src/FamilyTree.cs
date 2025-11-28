@@ -1,4 +1,10 @@
 namespace FamilytreesLib;
+using System.Drawing;
+using System.Reflection;
+using System.Threading.Tasks.Dataflow;
+using System.Windows;
+using Microsoft.VisualBasic;
+using Microsoft.Win32;
 
 public class FamilyTree
 {
@@ -35,12 +41,16 @@ public class FamilyTree
     {
         _person.Add(person);
     }
+    
     /// <summary>
-    /// function "RemovePerson" is for removing a person from the familyt ree
+    /// function "RemovePerson" is for removing a person from the familytree (funktioniert nicht)
     /// </summary>
     /// <param name="person"></param> parameter "person" is for giving the person as a person-object to remove from the familytree
-    public void RemovePerson(Person person)
-    {
-        _person.Remove(person);
-    }   
-}
+    public void RemovePerson(Person person) {
+       _person.Remove(person);
+    }
+
+   
+   
+} 
+    
