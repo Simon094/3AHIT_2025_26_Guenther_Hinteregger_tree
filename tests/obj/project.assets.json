@@ -11,20 +11,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\simon\\.nuget\\packages\\": {}
+    "C:\\Users\\lukas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\tests\\FamilytreeTests.csproj",
+      "projectUniqueName": "C:\\Code\\SEW\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\tests\\FamilytreeTests.csproj",
       "projectName": "FamilytreeTests",
-      "projectPath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\tests\\FamilytreeTests.csproj",
-      "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\tests\\obj\\",
+      "projectPath": "C:\\Code\\SEW\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\tests\\FamilytreeTests.csproj",
+      "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
+      "outputPath": "C:\\Code\\SEW\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\tests\\obj\\",
       "projectStyle": "PackageReference",
       "centralPackageVersionsManagementEnabled": true,
       "configFilePaths": [
-        "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -36,8 +36,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj": {
-              "projectPath": "C:\\Users\\simon\\Desktop\\ITP2 Code\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj"
+            "C:\\Code\\SEW\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj": {
+              "projectPath": "C:\\Code\\SEW\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\\src\\FamilytreesLib.csproj"
             }
           }
         }
@@ -94,7 +94,7 @@
     {
       "code": "NU1008",
       "level": "Error",
-      "message": "Projekte, die die zentrale Paketversionsverwaltung verwenden, dürfen nicht die Version für die PackageReference-Elemente, sondern für die PackageVersion-Elemente definieren: Microsoft.NET.Test.Sdk;MSTest."
+      "message": "Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: Microsoft.NET.Test.Sdk;MSTest."
     }
   ]
 }

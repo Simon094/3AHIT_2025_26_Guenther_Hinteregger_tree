@@ -31,8 +31,6 @@ public class Person
     /// <summary>
     /// "_job" is for saving the job
     /// </summary>
-    private string _job;
-    private string _school;
     private bool _isMale;
     private List<Person> _children = new List<Person>();
     private Person _father;
@@ -41,12 +39,11 @@ public class Person
     private int? _fatherID;
     private int? _motherID;
 
-    public Person(string name, DateTime birthdate, bool married, DateTime? deathdate,bool isMale, Person father, Person mother, int personID, int? fatherID, int? motherID, string school = "", string job = "Arbeitslos")
+    public Person(string name, DateTime birthdate, bool married, DateTime? deathdate,bool isMale, Person father, Person mother, int personID, int? fatherID, int? motherID)
     {
         _name = name;
         _birthdate = birthdate;
         _married = married;
-        _job = job;
         DateTime today = DateTime.Today;
         _deathdate = deathdate;
         _isMale = isMale;
@@ -55,7 +52,6 @@ public class Person
         _personID = personID;
         _fatherID = fatherID;
         _motherID = motherID;
-        _school = school;
         if (this.IsAdult() == true)
         {
             _child = false;
@@ -113,11 +109,6 @@ public class Person
         return _married;
     }
 
-    public string getJob()
-    {
-        return _job;
-    }
-
     public string getGender()
     {
         return _isMale ? "Mann" : "Frau";
@@ -154,15 +145,6 @@ public class Person
          return age;
         }
         
-    }
-
-    public string getSchool(Person person)
-    {
-        if (person.IsAdult())
-        {
-            return "Die Person ist entweder kein Kind oder geht nicht zur Schule!";
-        }
-        return _school;
     }
 
     public Person Father
