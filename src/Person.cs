@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+using System.Diagnostics.Contracts;
+using System.Drawing;
 using System.Reflection;
 using System.Threading.Tasks.Dataflow;
 using System.Windows;
@@ -13,13 +14,13 @@ public class Person
     /// </summary>/
     private string _name;
     /// <summary>
-    /// "_birthdate" is for saving the birthdate as DateTime
+    /// "_birthyear" is for saving the birthyear as an int
     /// </summary>
-    private DateTime _birthdate;
+    private int _birthyear;
     /// <summary>
     /// "_deathdate" is for saving the deathdate as DateTime
     /// </summary>
-    private DateTime? _deathdate;
+    private int? _deathyear;
     /// <summary>
     /// "_married" is a bool to say if the person is married
     /// </summary>
@@ -33,25 +34,49 @@ public class Person
     /// </summary>
     private bool _isMale;
     private List<Person> _children = new List<Person>();
-    private Person _father;
-    private Person _mother;
+    private Person? _father;
+    private Person? _mother;
     private int _personID;
     private int? _fatherID;
     private int? _motherID;
+    private int _generation;
 
-    public Person(string name, DateTime birthdate, bool married, DateTime? deathdate,bool isMale, Person father, Person mother, int personID, int? fatherID, int? motherID)
+    public int PersonID
+  {
+    get => _personID;
+    set => _personID = value;
+  }
+
+  public int? FatherID
+  {
+    get => _fatherID;
+    set => _fatherID = value;
+  }
+
+  public int? MotherID
+  {
+    get => _motherID;
+    set => _motherID = value;
+  }
+
+    public int Generation
+  {
+    get => _generation;
+    set => _generation = value;
+  }
+    public Person(string name, int birthyear, bool married, int? deathyear,bool isMale, Person? father, Person? mother, int personID)
     {
         _name = name;
-        _birthdate = birthdate;
+        _birthyear = birthyear;
         _married = married;
         DateTime today = DateTime.Today;
-        _deathdate = deathdate;
+        _deathyear = deathyear;
         _isMale = isMale;
         _father = father;
         _mother = mother;
         _personID = personID;
-        _fatherID = fatherID;
-        _motherID = motherID;
+        _fatherID = _father.PersonID;
+        _motherID = _mother.PersonID;
         if (this.IsAdult() == true)
         {
             _child = false;
@@ -61,16 +86,32 @@ public class Person
             _child = true;
         }
 
+        _generation = CalculateGeneration();
     }
+
+    private int CalculateGeneration()
+{
+    // wenn keine Eltern bekannt → älteste Generation
+    if (_father == null && _mother == null)
+        return 1;
+
+    int fatherGen = _father?.Generation ?? 5;
+    int motherGen = _mother?.Generation ?? 5;
+
+    int parentGen = Math.Max(fatherGen, motherGen);
+
+    // Kind ist immer 1 Generation jünger
+    return parentGen + 1;
+}
 
     public void addChild(Person child)
     {
         _children.Add(child);
     }
 
-    public void addDeathdate(DateTime date)
+    public void addDeathdate(int year)
     {
-        _deathdate = date;
+        _deathyear = year;
     }
 
     public void changeMarriageStatus()
@@ -89,19 +130,25 @@ public class Person
         }
     }
 
+    public int Age()
+  {
+    return Convert.ToInt32(DateTime.Today.Year) - _birthyear;
+  }
+
     public string getName()
     {
         return _name;
     }
 
-    public DateTime getBirthdate()
+    public int Birthyear
     {
-        return _birthdate;
+        get => _birthyear;
+        set => _birthyear = value;
     }
 
-    public DateTime? getDeathdate()
+    public int? Deathyear
     {
-        return _deathdate;
+        get => _deathyear;
     }
 
     public bool getMariageStatus()
@@ -115,36 +162,13 @@ public class Person
     }
     public bool IsAdult()
     {
-        DateTime today = DateTime.Today;
-        int age = today.Year - _birthdate.Year;
-        if (_birthdate.Date > today.AddYears(-age))
-        {
-            age--;
-        }
-
-        if (age >= 18)
+        if(Convert.ToInt32(DateTime.Today.Year) - _birthyear > 18)
         {
             return true;
-        }
-        else
+        } else
         {
             return false;
         }
-    }
-
-    public int getAge()
-    {
-        int age;
-        if(_deathdate == null) {
-        DateTime today = DateTime.Today;
-        age = today.Year - _birthdate.Year;
-        return age;
-        } else
-        {
-         age = _deathdate.Value.Year - _birthdate.Year;
-         return age;
-        }
-        
     }
 
     public Person Father
@@ -187,7 +211,7 @@ public class Person
 
         string aliveOrNot;
 
-        if(_deathdate == null)
+        if(_deathyear == null)
         {
             aliveOrNot = "ist";
         } else
@@ -197,12 +221,12 @@ public class Person
 
         string ageAlive;
 
-        if(_deathdate == null)
+        if(_deathyear == null)
         {
-            ageAlive = $"ist {getAge()} Jahre Alt";
+            ageAlive = $"ist {this.Age()} Jahre Alt";
         } else
         {
-            ageAlive = $"ist {getAge()} Jahre alt geworden";
+            ageAlive = $"ist {this.Age()} Jahre alt geworden";
         }
         return $"{_name} {aliveOrNot} {gender} und {ageAlive}";
     }
