@@ -10,3 +10,15 @@ c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\refint\FamilytreesLib.dll
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.pdb
 c:\Users\simon\Desktop\ITP2 Code\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\ref\FamilytreesLib.dll
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\bin\Debug\net9.0\FamilytreesLib.deps.json
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\bin\Debug\net9.0\FamilytreesLib.dll
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\bin\Debug\net9.0\FamilytreesLib.pdb
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.AssemblyInfoInputs.cache
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.AssemblyInfo.cs
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.csproj.CoreCompileInputs.cache
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.sourcelink.json
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.dll
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\refint\FamilytreesLib.dll
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\FamilytreesLib.pdb
+C:\Code\SEW\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\3AHIT_2025_26_Kumpitsch_Mayr_Stammbaum\src\obj\Debug\net9.0\ref\FamilytreesLib.dll

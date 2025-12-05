@@ -76,9 +76,9 @@ class Program
   }
     
 
-    static void SeeFamilyTree() //Mayr
+    static void SeeFamilyTree(FamilyTree familyTree) //Mayr
     {
-       
+       familyTree.DisplayFamilyTreeInfos();
     }
 
     static void DisplayFamilyTreeInfos(FamilyTree hinteregger)
@@ -176,7 +176,7 @@ public static class DatabaseCreator //Kumpitsch
     }
 }
 
-public static class DataBaseInserter
+public static class DataBaseInserter //Kumpitsch
 {
     public static void InsertToDatabase()
     {

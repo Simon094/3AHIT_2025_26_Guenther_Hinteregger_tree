@@ -75,8 +75,6 @@ public class Person
         _father = father;
         _mother = mother;
         _personID = personID;
-        _fatherID = _father.PersonID;
-        _motherID = _mother.PersonID;
         if (this.IsAdult() == true)
         {
             _child = false;
@@ -89,6 +87,10 @@ public class Person
         _generation = CalculateGeneration();
     }
 
+    /// <summary>
+    /// Function "CalculateGeneration" is for calculating which generation the person is in
+    /// </summary>
+    /// <returns></returns>
     private int CalculateGeneration()
 {
     // wenn keine Eltern bekannt → älteste Generation
@@ -104,16 +106,28 @@ public class Person
     return parentGen + 1;
 }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="child"></param>
     public void addChild(Person child)
     {
         _children.Add(child);
     }
 
+    /// <summary>
+    /// Adds a deathyear to the person
+    /// </summary>
+    /// <param name="year"></param>
     public void addDeathdate(int year)
     {
         _deathyear = year;
     }
 
+    /// <summary>
+    /// Changes the marriage status of a person, if its not known, then its 
+    /// </summary>
+    /// <exception cref="Exception"></exception>
     public void changeMarriageStatus()
     {
         if (_married == false)
@@ -132,7 +146,13 @@ public class Person
 
     public int Age()
   {
-    return Convert.ToInt32(DateTime.Today.Year) - _birthyear;
+    if(_deathyear != null)
+    {
+      return Convert.ToInt32(DateTime.Today.Year) - _birthyear;
+    } else
+    {
+      return Convert.ToInt32(_deathyear) - _birthyear;
+    }
   }
 
     public string getName()
