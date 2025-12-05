@@ -5,13 +5,14 @@ using System.Threading.Tasks.Dataflow;
 using System.Windows;
 using Microsoft.VisualBasic;
 using Microsoft.Win32;
+using System.Linq;
 
 public class FamilyTree
 {
     /// <summary>
     /// "_person" is for saving a list of the persons on the familytree
     /// </summary>
-    private List<Person> _person = new List<Person>();
+    private List<Person> _personen = new List<Person>();
     /// <summary>
     /// "_name" is for saving the name as a string
     /// </summary>
@@ -24,6 +25,14 @@ public class FamilyTree
     public FamilyTree(string name)
     {
         _name = name;
+    }
+
+    /// <summary>
+    /// Propertie "Personen" is for getting the list of persons in the familytree sorted by age
+    /// </summary>
+    public List<Person> Personen
+    {
+    get => _personen.OrderBy(p => p.Generation).ToList();
     }
     /// <summary>
     /// function "getName" is for giving out the name of a familytree as string
@@ -39,7 +48,7 @@ public class FamilyTree
     /// <param name="person"></param> parameter "person" is for giving the person as a person-object to add to the familytree
     public void AddPerson(Person person)
     {
-        _person.Add(person);
+        _personen.Add(person);
     }
     
     /// <summary>
@@ -47,11 +56,11 @@ public class FamilyTree
     /// </summary>
     /// <param name="person"></param> parameter "person" is for giving the person as a person-object to remove from the familytree
     public void RemovePerson(Person person) {
-       _person.Remove(person);
+       _personen.Remove(person);
     }
 
    public void DisplayFamilyTreeInfos() {
-    foreach(Person p in _person) {
+    foreach(Person p in _personen) {
         Console.WriteLine(p.ToString());
     }
    } 

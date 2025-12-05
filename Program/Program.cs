@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+using System.Numerics;
 using FamilytreesLib;
 namespace PaymentApp;
 using Microsoft.Data.Sqlite;
@@ -20,7 +20,7 @@ class Program
 
     static void HauptMenu() //Mayr
     {
-        FamilyTree Hinteregger = new FamilyTree("Hinteregger");
+        FamilyTree Hinteregger = MakeCurrentHintereggerFamilyTree();
         Console.WriteLine("-------------------------------------------------");
         Console.WriteLine("Drücke '1' um den Stammbaum zu sehen");
         Console.WriteLine("Drücke '2' um den Stammbaum zu bearbeiten");
@@ -33,7 +33,7 @@ class Program
         int choicesecond = CheckWrongChoiceInputForMainMenu(choicefirst);
         if(choicesecond == 1)
         {
-            SeeFamilyTree();
+            DisplayFamilyTreeInfos(Hinteregger);
         } else if(choicesecond == 2)
         {
             EditFamilyTree();
@@ -49,6 +49,31 @@ class Program
         }
     }
 
+    static FamilyTree MakeCurrentHintereggerFamilyTree()
+  {
+    Person johann_hinteregger = new Person("Johann Hinteregger", 1880, true, 1951, true, null, null, 1);
+    Person anna_hinteregger = new Person("Anna Hinteregger", 1885, true, 1958, false, null, null, 2);
+    Person franz_hinteregger = new Person("Franz Hinteregger", 1912, true, 1983, true, johann_hinteregger, anna_hinteregger, 3);
+    Person maria_hinteregger = new Person("Maria Hinteregger", 1916, true, 1990, false, null, null, 4);
+    Person helene_hinteregger = new Person("Helene Hinteregger", 1947, true, null, false, null, null, 6);
+    Person josef_hinteregger = new Person("Josef Hinteregger", 1943, true, 2005, true, franz_hinteregger, maria_hinteregger, 5);
+    Person günther_hinteregger = new Person("Günther Hinteregger", 1970, true, null, true, josef_hinteregger, helene_hinteregger, 7);
+    Person denise_hinteregger = new Person("Denise Hinteregger", 1990, true, null, false, null, null, 8);
+    Person markus_hinteregger = new Person("Markus Hinteregger", 2010, false, null, true, günther_hinteregger, denise_hinteregger, 9);
+    Person lisa_hinteregger = new Person("Lisa Hinteregger", 2012, false, null, false, günther_hinteregger, denise_hinteregger, 10);
+    FamilyTree Hinteregger = new FamilyTree("Hinteregger");
+    Hinteregger.AddPerson(johann_hinteregger);
+    Hinteregger.AddPerson(anna_hinteregger);
+    Hinteregger.AddPerson(franz_hinteregger);
+    Hinteregger.AddPerson(maria_hinteregger);
+    Hinteregger.AddPerson(helene_hinteregger);
+    Hinteregger.AddPerson(josef_hinteregger);
+    Hinteregger.AddPerson(günther_hinteregger);
+    Hinteregger.AddPerson(denise_hinteregger);
+    Hinteregger.AddPerson(lisa_hinteregger);
+    Hinteregger.AddPerson(markus_hinteregger);
+    return Hinteregger;
+  }
     
 
     static void SeeFamilyTree() //Mayr
@@ -56,9 +81,12 @@ class Program
        
     }
 
-    static void DisplayFamilyTreeInfos()
+    static void DisplayFamilyTreeInfos(FamilyTree hinteregger)
     {
-        
+        foreach(Person p in hinteregger.Personen)
+        {
+            Console.WriteLine(p.ToString());
+        }
     }
 
     static int CheckWrongChoiceInputForMainMenu(int choice) //Enter Taste tötet alles, Mayr
