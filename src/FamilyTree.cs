@@ -59,6 +59,9 @@ public class FamilyTree
        _personen.Remove(person);
     }
 
+    /// <summary>
+    /// function "DisplayFamilyTreeInfos" is for showing the infos for all persons in the familytree
+    /// </summary>
    public void DisplayFamilyTreeInfos() {
     foreach(Person p in _personen) {
         Console.WriteLine(p.ToString());
